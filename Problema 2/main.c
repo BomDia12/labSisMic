@@ -57,7 +57,7 @@ void config_leds() {
 }
 
 int capture_signal() {
-    while (new != true) {}
+     while (new != true) {}
     new = false;
     return cap;
 }
@@ -156,14 +156,6 @@ int main(void)
 	    char not_addr = capture_byte();
 	    char cmd = capture_byte();
 	    char not_cmd = capture_byte();
-
-	    if (addr != ~not_addr) {
-	        continue;
-	    }
-
-	    if (cmd != ~not_cmd) {
-	        continue;
-	    }
 
 	    curr = get_button_from_byte(cmd);
 	    control_leds(curr);

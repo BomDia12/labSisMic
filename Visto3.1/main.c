@@ -54,7 +54,7 @@ int main(void)
 	config_timers();
 
 	__enable_interrupt();
-	i2c_send(0x27, 0x08);
+	i2c_send(0x27, 0x00);
 	state = 1;
 
 	while (1) {}

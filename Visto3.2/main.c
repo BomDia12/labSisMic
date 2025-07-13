@@ -92,7 +92,7 @@ void lcd_write(char * str) {
         ptr++;
         counter++;
         if (counter == 16) {
-            lcd_write_byte(0xb8, 0);
+            lcd_write_byte(0xa8, 0);
             counter = 0;
         }
     }
